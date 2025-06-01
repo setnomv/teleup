@@ -1,0 +1,56 @@
+[db]
+  data-source = "postgresql://postgres.dzhvcjqmqvkbaeqazvjw:78-]}Ygx^Z?,7bK@aws-0-eu-central-2.pooler.supabase.com:6543/postgres"
+  log-level = 1
+  prepare-stmt = false
+  [db.pool]
+    enable = false
+    max-idle-connections = 25
+    max-lifetime = "10m"
+    max-open-connections = 25
+
+[cronjobs]
+clean-files-interval = '1h'
+clean-uploads-interval = '1h'
+enable = false
+folder-size-interval = '4h'
+
+[jwt]
+  allowed-users = ["usuariobea"]
+  secret = "3a1d8be604c22fd982e79324c87c7c21a691660feba3cc38ce77404590147e8efbe032ec927ecd61f616f7f4fca5c5712b55427f8d63ed9e8a10fcb73ea606ea"
+  session-time = "300d"
+
+[log]
+  level = 'info'
+
+[server]
+  graceful-shutdown = "15s"
+  port = 60211
+  read-timeout = "1h"
+  write-timeout = "1h"
+
+[tg]
+  app-hash = "b18441a1ff607e10a989891a5462e627"
+  app-id = 2040
+  app-version = "5.10.3 x64"
+  bg-bots-limit = 33
+  ntp = true
+  device-model = "Desktop"
+  disable-stream-bots = false
+  lang-code = "en"
+  lang-pack = "tdesktop"
+  rate = 50
+  reconnect-timeout = '5m'
+  rate-burst = 20
+  rate-limit = true
+  pool-size = 8
+  system-lang-code = "en-US"
+  
+  [tg.uploads]
+    retention = "7d"
+    threads = 8
+    max-retries = 10
+    encryption-key = "49189391c1291542d4a8ef22e5f2f505288efbac813845374e3fb1c366fcd5ac"
+  [tg.stream]
+    buffers = 8
+    chunk-timeout = '20s'
+    multi-threads = 4
